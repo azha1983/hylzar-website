@@ -12,6 +12,7 @@ const closeMenu = () => {
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open navigation");
   navigation.classList.remove("open");
+  header.classList.remove("menu-active");
   document.body.classList.remove("menu-open");
 };
 
@@ -20,6 +21,7 @@ menuToggle.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(!isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
   navigation.classList.toggle("open", !isOpen);
+  header.classList.toggle("menu-active", !isOpen);
   document.body.classList.toggle("menu-open", !isOpen);
 });
 
