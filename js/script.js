@@ -1,16 +1,24 @@
 const header = document.querySelector("#site-header");
 const menuToggle = document.querySelector(".menu-toggle");
+const menuToggleLabel = document.querySelector(".menu-toggle-label");
 const navigation = document.querySelector("#primary-nav");
-const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+const navLinks = [...document.querySelectorAll('.nav-route a[href^="#"]')];
 const sections = [...document.querySelectorAll("main section[id]")];
+const headerProgress = document.querySelector(".header-progress span");
 
-const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 24);
+const updateHeader = () => {
+  header.classList.toggle("scrolled", window.scrollY > 24);
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+  headerProgress.style.transform = `scaleX(${progress})`;
+};
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 const closeMenu = () => {
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open navigation");
+  menuToggleLabel.textContent = "Menu";
   navigation.classList.remove("open");
   header.classList.remove("menu-active");
   document.body.classList.remove("menu-open");
@@ -20,6 +28,7 @@ menuToggle.addEventListener("click", () => {
   const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
   menuToggle.setAttribute("aria-expanded", String(!isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+  menuToggleLabel.textContent = isOpen ? "Menu" : "Close";
   navigation.classList.toggle("open", !isOpen);
   header.classList.toggle("menu-active", !isOpen);
   document.body.classList.toggle("menu-open", !isOpen);
@@ -31,6 +40,10 @@ navigation.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760 && navigation.classList.contains("open")) closeMenu();
 });
 
 const revealObserver = new IntersectionObserver(
