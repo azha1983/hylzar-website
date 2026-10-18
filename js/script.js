@@ -66,7 +66,7 @@ const activeNavObserver = new IntersectionObserver(
       if (!entry.isIntersecting) return;
       navLinks.forEach((link) => {
         const target = link.getAttribute("href");
-        const isProductSection = target === "#career" && ["career", "talent"].includes(entry.target.id);
+        const isProductSection = target === "#products" && ["products", "talent"].includes(entry.target.id);
         link.classList.toggle("active", target === `#${entry.target.id}` || isProductSection);
       });
     });

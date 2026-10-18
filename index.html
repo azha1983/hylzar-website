@@ -60,7 +60,7 @@
 
       <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
         <div class="nav-route">
-          <a href="#career"><small>01</small><span>Products</span></a>
+          <a href="#products"><small>01</small><span>Products</span></a>
           <a href="#services"><small>02</small><span>Services</span></a>
           <a href="#about"><small>03</small><span>About</span></a>
           <a href="#contact"><small>04</small><span>Contact</span></a>
@@ -78,46 +78,43 @@
 
   <main id="main-content">
     <section class="hero" id="home">
-      <div class="hero-orb hero-orb-one"></div>
-      <div class="hero-orb hero-orb-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span> Digital innovation, thoughtfully delivered.</p>
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="container hero-stage">
+        <div class="hero-centre reveal">
+          <p class="hero-kicker">Kuala Lumpur · Malaysia</p>
+          <div class="hero-monogram" aria-hidden="true">H</div>
+          <p class="hero-promise">Human-centred technology</p>
           <h1>Technology Built Around <span>Your Needs.</span></h1>
-          <p class="hero-lead">Hylzar creates purposeful digital products, bespoke solutions and high-impact
-            microsites—supported by professional training that helps people and organisations move forward.</p>
+          <p class="hero-lead">Purposeful digital products and professional services designed for real people, real work and meaningful progress.</p>
           <div class="hero-actions">
-            <a class="button hero-button-primary" href="#career">Explore Our Products <span aria-hidden="true">→</span></a>
+            <a class="button hero-button-primary" href="#products">Explore Our Products <span aria-hidden="true">→</span></a>
             <a class="button hero-button-secondary" href="#services">Our Services <span aria-hidden="true">→</span></a>
           </div>
-          <div class="hero-proof" aria-label="Hylzar capabilities">
-            <span>Digital products</span>
-            <span>Bespoke solutions</span>
-            <span>Professional training</span>
-          </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Hylzar technology capabilities">
-          <div class="tech-canvas" aria-hidden="true">
-            <div class="tech-grid"></div>
-            <div class="tech-orbit tech-orbit-outer"></div>
-            <div class="tech-orbit tech-orbit-inner"></div>
-            <div class="tech-core"><span>H</span><small>Human-centred<br>technology</small></div>
-            <span class="tech-node tech-node-one"></span>
-            <span class="tech-node tech-node-two"></span>
-            <span class="tech-node tech-node-three"></span>
-            <span class="tech-node tech-node-four"></span>
-            <div class="capability-chip chip-products"><i></i><span>Digital Products</span><small>Intelligent platforms</small></div>
-            <div class="capability-chip chip-solutions"><i></i><span>Bespoke Solutions</span><small>Built for your workflow</small></div>
-            <div class="capability-chip chip-microsites"><i></i><span>Microsites</span><small>Focused digital experiences</small></div>
-            <div class="capability-chip chip-training"><i></i><span>Training</span><small>Practical capability building</small></div>
-          </div>
+        <div class="hero-services" aria-label="Hylzar capabilities">
+          <a class="hero-service hero-service-products reveal" href="#products">
+            <img src="assets/images/hero-digital-products.webp" width="720" height="480" alt="Malaysian technology team collaborating on digital products" decoding="async">
+            <span><small>01</small>Digital Products</span>
+          </a>
+          <a class="hero-service hero-service-solutions reveal" href="#services">
+            <img src="assets/images/hero-bespoke-solutions.webp" width="720" height="480" alt="Malaysian consultants presenting a bespoke digital workflow" decoding="async">
+            <span><small>02</small>Bespoke Solutions</span>
+          </a>
+          <a class="hero-service hero-service-microsites reveal" href="#services">
+            <img src="assets/images/hero-microsite-development.webp" width="720" height="480" alt="Malaysian web professional developing a focused microsite" decoding="async">
+            <span><small>03</small>Microsite Development</span>
+          </a>
+          <a class="hero-service hero-service-training reveal" href="#services">
+            <img src="assets/images/hero-professional-training.webp" width="720" height="480" alt="Malaysian professionals participating in technology training" decoding="async">
+            <span><small>04</small>Professional Training</span>
+          </a>
         </div>
       </div>
-      <a class="scroll-cue" href="#career" aria-label="Explore products"><span></span> Explore our products</a>
+      <a class="scroll-cue" href="#products" aria-label="Explore products"><span></span> Explore our products</a>
     </section>
 
-    <section class="product-section section" id="career">
+    <section class="product-section section" id="products">
       <div class="container">
         <div class="products-heading reveal">
           <div>
@@ -130,15 +127,15 @@
 
         <div class="products-grid">
           <article class="product-card product-card-iworkmatch reveal" id="talent">
-            <div class="product-card-visual" aria-hidden="true">
-              <div class="product-ui-window">
-                <div class="product-ui-bar"><span></span><span></span><span></span><small>iWorkMatch</small></div>
-                <div class="match-visual">
-                  <div class="match-score"><strong>92</strong><small>match</small></div>
-                  <div class="match-lines"><i></i><i></i><i></i></div>
-                  <div class="match-profile"><span>Career</span><span>Talent</span></div>
+            <div class="product-card-visual product-card-visual-preview">
+              <figure class="product-browser-preview">
+                <div class="product-browser-bar" aria-hidden="true">
+                  <span></span><span></span><span></span><small>iworkmatch.com</small>
                 </div>
-              </div>
+                <img src="assets/images/iworkmatch-landing.webp"
+                  alt="iWorkMatch landing page featuring Career Intelligence and Talent Intelligence solutions"
+                  width="1200" height="700" loading="lazy" decoding="async">
+              </figure>
             </div>
             <div class="product-card-body">
               <div class="product-card-meta"><span>01</span><small>Career &amp; Talent Intelligence</small></div>
@@ -150,13 +147,15 @@
           </article>
 
           <article class="product-card product-card-iamanah reveal" id="iamanah">
-            <div class="product-card-visual" aria-hidden="true">
-              <div class="legacy-visual">
-                <div class="legacy-ring"><span>iA</span></div>
-                <div class="legacy-item legacy-family"><i></i>Family</div>
-                <div class="legacy-item legacy-assets"><i></i>Assets</div>
-                <div class="legacy-item legacy-plan"><i></i>Legacy plan</div>
-              </div>
+            <div class="product-card-visual product-card-visual-preview">
+              <figure class="product-browser-preview">
+                <div class="product-browser-bar" aria-hidden="true">
+                  <span></span><span></span><span></span><small>iamanah.com</small>
+                </div>
+                <img src="assets/images/iamanah-landing.webp"
+                  alt="iAmanah landing page presenting private Islamic legacy planning tools"
+                  width="1200" height="700" loading="lazy" decoding="async">
+              </figure>
             </div>
             <div class="product-card-body">
               <div class="product-card-meta"><span>02</span><small>Islamic Legacy Intelligence</small></div>
@@ -167,20 +166,18 @@
             </div>
           </article>
 
-          <article class="product-card product-card-vault reveal" id="digital-vault">
-            <div class="product-card-visual" aria-hidden="true">
-              <div class="vault-visual">
-                <div class="vault-shield"><span></span></div>
-                <div class="vault-file vault-file-one"><i></i><b></b></div>
-                <div class="vault-file vault-file-two"><i></i><b></b></div>
-                <div class="vault-file vault-file-three"><i></i><b></b></div>
-              </div>
+          <article class="product-card product-card-petibesi reveal" id="digital-vault">
+            <div class="product-card-visual product-card-visual-app">
+              <img class="product-app-preview" src="assets/images/ipetibesi-app-mockup.webp"
+                alt="iPetiBesi mobile app dashboard displayed on a premium smartphone with receipt capture, receipts, digital vault and recent transactions"
+                width="1200" height="800" loading="lazy" decoding="async">
             </div>
             <div class="product-card-body">
-              <div class="product-card-meta"><span>03</span><small>Secure Document Organisation</small></div>
-              <h3>Digital Vault</h3>
-              <p>Securely organise important personal documents and manage trusted access when it matters.</p>
-              <span class="product-status">Coming Soon</span>
+              <div class="product-card-meta"><span>03</span><small>Smart Receipts &amp; Digital Vault</small></div>
+              <h3>iPetiBesi</h3>
+              <p class="product-tagline">Capture. Organise. Secure.</p>
+              <p>Capture receipts, track purchases and securely organise important documents.</p>
+              <span class="product-status">In Development</span>
             </div>
           </article>
         </div>
@@ -200,15 +197,9 @@
 
         <div class="service-grid">
           <article class="service-card service-card-bespoke reveal">
-            <div class="service-visual" aria-hidden="true">
-              <div class="solution-visual">
-                <span class="solution-block block-one"></span>
-                <span class="solution-block block-two"></span>
-                <span class="solution-block block-three"></span>
-                <i class="solution-line line-one"></i>
-                <i class="solution-line line-two"></i>
-                <div class="solution-core">H</div>
-              </div>
+            <div class="service-visual">
+              <img src="assets/images/hero-bespoke-solutions.webp" width="720" height="480"
+                alt="Malaysian consultants presenting a bespoke digital workflow" loading="lazy" decoding="async">
             </div>
             <div class="service-card-body">
               <div class="service-card-meta"><span>01</span><small>Tailored Digital Systems</small></div>
@@ -220,14 +211,9 @@
           </article>
 
           <article class="service-card service-card-microsite reveal">
-            <div class="service-visual" aria-hidden="true">
-              <div class="microsite-visual">
-                <div class="browser-bar"><span></span><span></span><span></span><i></i></div>
-                <div class="microsite-layout">
-                  <b></b><strong></strong><small></small>
-                  <div><i></i><i></i><i></i></div>
-                </div>
-              </div>
+            <div class="service-visual">
+              <img src="assets/images/hero-microsite-development.webp" width="720" height="480"
+                alt="Malaysian web professional developing a focused microsite" loading="lazy" decoding="async">
             </div>
             <div class="service-card-body">
               <div class="service-card-meta"><span>02</span><small>Focused Digital Experiences</small></div>
@@ -239,13 +225,9 @@
           </article>
 
           <article class="service-card service-card-training reveal">
-            <div class="service-visual" aria-hidden="true">
-              <div class="training-visual">
-                <div class="training-mark"><span>AI</span></div>
-                <div class="training-signal signal-one"><i></i><b></b></div>
-                <div class="training-signal signal-two"><i></i><b></b></div>
-                <div class="training-signal signal-three"><i></i><b></b></div>
-              </div>
+            <div class="service-visual">
+              <img src="assets/images/hero-professional-training.webp" width="720" height="480"
+                alt="Malaysian professionals participating in technology training" loading="lazy" decoding="async">
             </div>
             <div class="service-card-body">
               <div class="service-card-meta"><span>03</span><small>Practical Capability Building</small></div>
@@ -317,7 +299,7 @@
         <h3>Products</h3>
         <a href="https://iworkmatch.com" target="_blank" rel="noopener">iWorkMatch ↗</a>
         <a href="https://iamanah.com" target="_blank" rel="noopener">iAmanah ↗</a>
-        <a href="#digital-vault">Digital Vault · Coming Soon</a>
+        <a href="#digital-vault">iPetiBesi · In Development</a>
       </div>
       <div class="footer-column">
         <h3>Services</h3>
